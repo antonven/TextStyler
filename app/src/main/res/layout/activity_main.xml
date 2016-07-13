@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="textstyler.anton.com.textstyler.MainActivity"
+    android:id="@+id/sd">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sampleText"
+        android:layout_marginTop="37dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bold"
+        android:id="@+id/checkBold"
+        android:layout_below="@+id/sampleText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Italic"
+        android:id="@+id/checkItalic"
+        android:layout_alignBottom="@+id/checkBold"
+        android:layout_toRightOf="@+id/checkBold"
+        android:layout_toEndOf="@+id/checkBold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:checked="false" />
+
+    <RadioGroup
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/checkBold"
+        android:id="@+id/btnGrp1">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red"
+            android:id="@+id/redRadio"
+            android:layout_below="@+id/checkBold"
+            android:layout_alignLeft="@+id/checkBold"
+            android:layout_alignStart="@+id/checkBold"
+            android:checked="false"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Green"
+            android:id="@+id/greenRadio"
+            android:layout_below="@+id/redRadio"
+            android:layout_alignLeft="@+id/redRadio"
+            android:layout_alignStart="@+id/redRadio"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blue"
+            android:id="@+id/blueRadio"
+            android:layout_below="@+id/greenRadio"
+            android:layout_alignLeft="@+id/greenRadio"
+            android:layout_alignStart="@+id/greenRadio"
+            android:checked="false" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/displayTxt"
+
+        android:layout_marginTop="300dp"
+        android:layout_gravity="center_horizontal" />
+
+
+</RelativeLayout>
