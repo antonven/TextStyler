@@ -40,36 +40,28 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                        if(checkBold.isChecked() && checkItalic.isChecked())
-                                displayTxt.setTypeface(null,Typeface.BOLD_ITALIC);
-                        else if(checkItalic.isChecked())
-                            displayTxt.setTypeface(null, Typeface.ITALIC);
-                        else if(checkBold.isChecked())
-                            displayTxt.setTypeface(null, Typeface.BOLD);
-                        else
-                            displayTxt.setTypeface(null, Typeface.NORMAL);
-
-//                    else{
-//                            displayTxt.setTypeface(null,Typeface.ITALIC);
-//                    }
+                    if(checkBold.isChecked() && checkItalic.isChecked())
+                            displayTxt.setTypeface(null,Typeface.BOLD_ITALIC);
+                    else if(checkItalic.isChecked())
+                        displayTxt.setTypeface(null, Typeface.ITALIC);
+                    else if(checkBold.isChecked())
+                        displayTxt.setTypeface(null, Typeface.BOLD);
+                    else
+                        displayTxt.setTypeface(null, Typeface.NORMAL);
                 }
             });
         assert checkItalic != null;
         checkItalic.setOnCheckedChangeListener(new OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (buttonView.isChecked()) {
-                    if (checkBold.isChecked())
-                        displayTxt.setTypeface(null, Typeface.BOLD_ITALIC);
-                    else
+                    if(checkBold.isChecked() && checkItalic.isChecked())
+                        displayTxt.setTypeface(null,Typeface.BOLD_ITALIC);
+                    else if(checkItalic.isChecked())
                         displayTxt.setTypeface(null, Typeface.ITALIC);
-                } else {
-                    if(checkBold.isChecked())
-                    displayTxt.setTypeface(null, Typeface.BOLD);
+                    else if(checkBold.isChecked())
+                        displayTxt.setTypeface(null, Typeface.BOLD);
                     else
                         displayTxt.setTypeface(null, Typeface.NORMAL);
-
-                }
             }
         });
 
@@ -91,8 +83,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
             assert sampleText != null;
             sampleText.addTextChangedListener(new TextWatcher() {
                 TextView displayTxt = (TextView)findViewById(R.id.displayTxt);
@@ -107,10 +97,6 @@ public class MainActivity extends AppCompatActivity {
                 }
                 @Override
                 public void afterTextChanged(Editable s) {
-
-
-
-
                 }
             });
     }
